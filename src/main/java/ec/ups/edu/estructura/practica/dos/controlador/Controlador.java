@@ -27,7 +27,6 @@ public class Controlador {
         while (opcionPrincipal != 0) {
             opcionPrincipal = vista.mostrarMenuPrincipal();
 
-            // Instancia de [dato] segun la opcion escogida
             switch (opcionPrincipal) {
                 case 1:
                     String nombre = vista.pedirNombre();
