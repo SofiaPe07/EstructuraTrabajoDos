@@ -11,6 +11,7 @@ import java.util.Stack;
  * @author Sofi Peña
  */
 public class Pila<T> {
+    //atributos con <T> por que van a ser genericos
  
     private Stack<T> pila;
     private double size;
@@ -20,11 +21,12 @@ public class Pila<T> {
         this.size = 0;
     }
     
+    //metodo para agregar
     public void agregar(T elemento){
         pila.push(elemento);
         size++;
     }
-    
+    //metodo para procesar los productos
     public T procesar(){
         return pila.pop();
     }
@@ -33,7 +35,7 @@ public class Pila<T> {
     public boolean estaVacia(){
         return pila.isEmpty();
     }
-    
+    //para poder ver la lista de productos guardada
     
     public void verElementos(Stack<T> pila){
         for (T t : pila) {

@@ -12,6 +12,7 @@ import ec.ups.edu.estructura.practica.dos.vista.Vista;
  * @author Sofi Peña
  */
 public class EstructuraPracticaDos {
+    //se ejecuta el programa
 
     public static void main(String[] args) {
         Vista vista = new Vista();

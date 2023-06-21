@@ -9,15 +9,16 @@ package ec.ups.edu.estructura.practica.dos.modelo;
  * @author Sofi Peña
  */
 public class Producto {
+    //atributos 
     private String nombre;
     private String codigo;
     private double precio;
     private int cantidad;
     private Producto siguiente;
-
+//constructor vacio
     public Producto() {
     }
-
+//constructor de producto
     public Producto(String nombre, String codigo, double precio, int cantidad) {
         this.nombre = nombre;
         this.codigo = codigo;
@@ -26,6 +27,7 @@ public class Producto {
         this.siguiente = null;
     }
 
+    // getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -67,7 +69,7 @@ public class Producto {
     }
     
     
-
+//to string
     @Override
     public String toString() {
         return "Producto{" + "nombre=" + nombre + ", codigo=" + codigo + ", precio=" + precio + ", cantidad=" + cantidad + '}';

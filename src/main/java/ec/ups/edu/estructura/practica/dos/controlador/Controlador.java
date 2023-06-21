@@ -13,20 +13,21 @@ import ec.ups.edu.estructura.practica.dos.vista.Vista;
  * @author Sofi Peña
  */
 public class Controlador {
+    //incluir las clases vista e inventario
     private Vista vista;
     private Inventario inventario;
-
+//constructor
     public Controlador(Vista vista) {
         this.vista = vista;
         this.inventario = new Inventario();
     }
-    
+    //para que si ponemos uno empieza desde ahi y no desde el 0
     public void iniciar() {
         int opcionPrincipal = -1;
 
         while (opcionPrincipal != 0) {
             opcionPrincipal = vista.mostrarMenuPrincipal();
-
+//el menu que se da para poder elegir las opciones
             switch (opcionPrincipal) {
                 case 1:
                     String nombre = vista.pedirNombre();

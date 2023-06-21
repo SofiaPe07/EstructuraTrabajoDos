@@ -4,7 +4,6 @@
  */
 package ec.ups.edu.estructura.practica.dos.vista;
 
-import ec.ups.edu.estructura.practica.dos.modelo.Inventario;
 import java.util.Scanner;
 
 /**
@@ -12,14 +11,16 @@ import java.util.Scanner;
  * @author Sofi Peña
  */
 public class Vista {
+    
     private Scanner scanner;
 
     public Vista() {
         scanner = new Scanner(System.in);
     }
 
+    //las opciones del menu 
     public int mostrarMenuPrincipal() {
-        System.out.println("=== MENU PRINCIPAL ===");
+        System.out.println(" MENU PRINCIPAL ");
         System.out.println("1. Agregar un producto");
         System.out.println("2. Buscar el producto por nombre");
         System.out.println("3. Inventario de los productos");
@@ -30,7 +31,8 @@ public class Vista {
         int opcion = scanner.nextInt();
         return opcion;
     }
-
+    
+    //cada uno d estos nos da la orden para cada opcion en el menu
     public String pedirNombre() {
         System.out.println("Ingrese el nombre del producto: ");
         return scanner.next();

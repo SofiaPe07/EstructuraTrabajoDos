@@ -31,7 +31,7 @@ public class Inventario {
         }
         return actual;
     }
-    
+    //metodo para agregar el producto
     public void agregar(String nombre, String codigo, double precio, int cantidad){
         Producto nuevo = new Producto(nombre, codigo, precio, cantidad);
         if (producto == null){
@@ -42,7 +42,7 @@ public class Inventario {
         }
         size++;
     }
-    
+    //metodo para buscar el producto por el codigo
     public Producto buscarPorCodigo(String codigo){
         Producto actual = producto;
         while(actual != null){
@@ -52,7 +52,7 @@ public class Inventario {
         }
         return null;
     }
-    
+    // metodo para eliminar algun producto
     public void eliminar(String codigo){
         if (producto == null){
             return;
@@ -69,7 +69,7 @@ public class Inventario {
         }
         size--;
     }
-    
+    //metodo para listar todos los productos
     public void listar(){
         Producto actual = producto;
         while (actual != null){
@@ -77,10 +77,12 @@ public class Inventario {
             actual = actual.getSiguiente();
         }
     }
-    
+    // con esto podemos ver el tama;o de la lista
     public double getSize() {
         return size;
     }
+    
+    //,metodo para vender algun producto
     
     public void vender(String codigo){
         Producto p = this.buscarPorCodigo(codigo);
@@ -97,6 +99,4 @@ public class Inventario {
     public String toString() {
         return "Inventario{" + "producto=" + producto + '}';
     }
-    
-    
 }
